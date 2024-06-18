@@ -14,6 +14,7 @@ app.post('/download', async (req, res) => {
         const videoUrl = await fetchVideo(url);
         res.json({ downloadUrl: videoUrl });
     } catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'Failed to fetch video URL' });
     }
 });
