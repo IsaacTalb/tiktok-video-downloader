@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// mention about the error
 app.post('/download', async (req, res) => {
     const url = req.body.url;
     try {
